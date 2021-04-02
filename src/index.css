@@ -1,13 +1,72 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body, html {
+  font-size: 16px;
+}
+
+*,::after,::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #9c1aff 0%, rgb(119, 0, 255) 100%);
+  position: relative;
+  height: 100vh;
+}
+
+.grab-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  background: #192c38;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: width .2s linear, height .2s linear;
+  z-index: 100000;
+}
+
+.grab-box__modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+}
+
+.grab-box_radius1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #efefef;
+}
+
+.grab-box_radius2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 5px solid #efefef;
+}
+
+.grab-box__grid {
+  display: grid;
+  grid-template-columns: 150px 150px;
+  grid-template-rows: 150px 150px;
+}
+
+.grab-box__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  margin: auto;
 }
