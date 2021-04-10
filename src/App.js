@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import TouchMenuItems from './TouchMenuItems';
 
 const TouchMenu = () => {
@@ -17,7 +17,7 @@ const TouchMenu = () => {
     return { top: top0, left: left0, width: 60, height: 60 }
   });
 
-  function positionAutoControl(resolve) {
+  const positionAutoControl = useCallback(resolve => {
     let LEFT = (INNER_WIDTH - 60) / 2;
     let TOP = (INNER_HEIGHT - 60) / 2;
     let { left, top } = styles;
@@ -47,17 +47,17 @@ const TouchMenu = () => {
       setStyles(prevStyles => ({ ...prevStyles, left: INNER_WIDTH - 60, transition: TRANSITION_NORMAL }))
     }
     resolve()
-  }
+  }, [INNER_HEIGHT, INNER_WIDTH, TRANSITION_NORMAL, styles])
 
-  function setPositionToBox(event, distanceX, distanceY) {
+  const setPositionToBox = useCallback((event, distanceX, distanceY) => {
     isDragged.current = true;
     let boxPositionX = event.changedTouches[0].pageX - distanceX;
     let boxPositionY = event.changedTouches[0].pageY - distanceY;
     let createLimit = boxPositionX > 0 && boxPositionX < INNER_WIDTH - styles.width && boxPositionY > 0 && boxPositionY < INNER_HEIGHT - styles.height
     if (createLimit) setStyles(prevState => ({ ...prevState, top: boxPositionY, left: boxPositionX }));
-  }
+  }, [INNER_HEIGHT, INNER_WIDTH, styles.height, styles.width])
 
-  function onHandleTouchStart(event) {
+  const onHandleTouchStart = useCallback(event => {
     setStyles(prevStyles => ({ ...prevStyles, transition: TRANSITION_ZERO }));
     const distanceX = event.changedTouches[0].pageX - styles.left;
     const distanceY = event.changedTouches[0].pageY - styles.top;
@@ -66,9 +66,9 @@ const TouchMenu = () => {
       return
     }
     isDragged.current = true;
-  }
+  }, [TRANSITION_ZERO, setPositionToBox, styles.left, styles.top])
 
-  function onHandleTochEnd() {
+  const onHandleTochEnd = useCallback(() => {
     document.ontouchmove = () => null;
     if (isDragged.current) {
       isDragged.current = false;
@@ -84,9 +84,9 @@ const TouchMenu = () => {
       prevPositions.current = { left: styles.left, top: styles.top };
       setStyles({ transition: TRANSITION_NORMAL, width: 300, height: 300, left: (INNER_WIDTH - 300) / 2, top: (INNER_HEIGHT - 300) / 2 });
     }
-  }
+  }, [TRANSITION_NORMAL, INNER_WIDTH, INNER_HEIGHT, TRANSITION_ZERO, styles.left, styles.top, positionAutoControl])
 
-  function onHandleClickGrabBoxItem(e, type) {
+  const onHandleClickGrabBoxItem = useCallback((e, type) => {
     e.stopPropagation();
     menuIsOpen.current = false;
     setStyles({ transition: TRANSITION_NORMAL, width: 60, height: 60, left: prevPositions.current.left, top: prevPositions.current.top });
@@ -109,7 +109,7 @@ const TouchMenu = () => {
       default:
         break
     }
-  }
+  },[TRANSITION_NORMAL])
 
   window.onunload = () => {
     if (menuIsOpen.current) {

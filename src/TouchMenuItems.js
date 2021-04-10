@@ -1,4 +1,4 @@
-import { faBars, faDice, faHome, faSearch, faSms } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faDice, faHome, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 
