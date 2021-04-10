@@ -3,6 +3,11 @@ body {
 }
 
 body, html {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   font-size: 16px;
 }
 
@@ -29,6 +34,12 @@ body {
   transition: width .2s linear, height .2s linear;
   z-index: 100000;
 }
+
+.touchbar__title {
+  text-align: center;
+  color: white;
+}
+
 
 .touchbar__modal {
   position: fixed;
@@ -87,6 +98,10 @@ body {
 }
 
 @media(max-width: 768px){
+  .touchbar__title {
+    display: none;
+  }
+
   .touchbar {
     display: flex;
   }

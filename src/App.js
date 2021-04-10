@@ -119,26 +119,29 @@ const TouchMenu = () => {
     localStorage.setItem("TouchMenuCoords", JSON.stringify({ left0: styles.left, top0: styles.top }))
   }
   return (
-    <div className="touchbar"
-      style={styles}
-      onTouchStart={onHandleTouchStart}
-      onTouchEnd={onHandleTochEnd}
-    >
-      {
-        menuIsOpen.current
-          ?
-          <TouchMenuItems
-            onHandleClickGrabBoxItem={onHandleClickGrabBoxItem}
-          />
-          :
-          <>
-            <div className="touchbar_radius1">
-              <div className="touchbar_radius2">
+    <>
+      <h2 className="touchbar__title">Touch menu starts to work when window inner width less than 769px and in Mobile Devices!(Touch events)</h2>
+      <div className="touchbar"
+        style={styles}
+        onTouchStart={onHandleTouchStart}
+        onTouchEnd={onHandleTochEnd}
+      >
+        {
+          menuIsOpen.current
+            ?
+            <TouchMenuItems
+              onHandleClickGrabBoxItem={onHandleClickGrabBoxItem}
+            />
+            :
+            <>
+              <div className="touchbar_radius1">
+                <div className="touchbar_radius2">
+                </div>
               </div>
-            </div>
-          </>
-      }
-    </div>
+            </>
+        }
+      </div>
+    </>
   );
 }
 
