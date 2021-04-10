@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/React-Iphone-Touchbar-Menu/static/css/main.0c2c0814.chunk.css",
-    "main.js": "/React-Iphone-Touchbar-Menu/static/js/main.b9f679d3.chunk.js",
-    "main.js.map": "/React-Iphone-Touchbar-Menu/static/js/main.b9f679d3.chunk.js.map",
+    "main.js": "/React-Iphone-Touchbar-Menu/static/js/main.89149ff9.chunk.js",
+    "main.js.map": "/React-Iphone-Touchbar-Menu/static/js/main.89149ff9.chunk.js.map",
     "runtime-main.js": "/React-Iphone-Touchbar-Menu/static/js/runtime-main.c80529be.js",
     "runtime-main.js.map": "/React-Iphone-Touchbar-Menu/static/js/runtime-main.c80529be.js.map",
     "static/js/2.2214d33e.chunk.js": "/React-Iphone-Touchbar-Menu/static/js/2.2214d33e.chunk.js",
@@ -15,6 +15,6 @@
     "static/js/runtime-main.c80529be.js",
     "static/js/2.2214d33e.chunk.js",
     "static/css/main.0c2c0814.chunk.css",
-    "static/js/main.b9f679d3.chunk.js"
+    "static/js/main.89149ff9.chunk.js"
   ]
 }
