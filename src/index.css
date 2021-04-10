@@ -16,21 +16,21 @@ body {
   height: 100vh;
 }
 
-.grab-box {
-  display: flex;
+.touchbar {
+  display: none;
   align-items: center;
   justify-content: center;
   position: fixed;
   width: 60px;
   height: 60px;
-  background: #192c38;
+  background: #071d2a;
   border-radius: 1rem;
   cursor: pointer;
   transition: width .2s linear, height .2s linear;
   z-index: 100000;
 }
 
-.grab-box__modal {
+.touchbar__modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -39,7 +39,7 @@ body {
   z-index: -1;
 }
 
-.grab-box_radius1 {
+.touchbar_radius1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,14 +49,14 @@ body {
   border: 5px solid #efefef;
 }
 
-.grab-box_radius2 {
+.touchbar_radius2 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
   border: 5px solid #efefef;
 }
 
-.grab-box__grid {
+.touchbar__grid {
   display: grid;
   grid-template-columns: 150px 150px;
   grid-template-rows: 150px 150px;
@@ -64,11 +64,11 @@ body {
   transition: opacity .25s linear;
 }
 
-.grab-box__grid.opacity {
+.touchbar__grid.opacity {
   opacity: 1;
 }
 
-.grab-box__item {
+.touchbar__item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,4 +76,18 @@ body {
   height: 120px;
   margin: auto;
   font-size: 30px;
+}
+
+.touchbar__item button {
+  background: transparent;
+    color: white;
+    border: 0;
+    outline: none;
+    font-size: 1.8rem;
+}
+
+@media(max-width: 768px){
+  .touchbar {
+    display: flex;
+  }
 }
