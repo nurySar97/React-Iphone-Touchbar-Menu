@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/React-Iphone-Touchbar-Menu/static/css/main.e2efecc4.chunk.css",
-    "main.js": "/React-Iphone-Touchbar-Menu/static/js/main.e5e86696.chunk.js",
-    "main.js.map": "/React-Iphone-Touchbar-Menu/static/js/main.e5e86696.chunk.js.map",
+    "main.css": "/React-Iphone-Touchbar-Menu/static/css/main.69e5aa8f.chunk.css",
+    "main.js": "/React-Iphone-Touchbar-Menu/static/js/main.b9f679d3.chunk.js",
+    "main.js.map": "/React-Iphone-Touchbar-Menu/static/js/main.b9f679d3.chunk.js.map",
     "runtime-main.js": "/React-Iphone-Touchbar-Menu/static/js/runtime-main.c80529be.js",
     "runtime-main.js.map": "/React-Iphone-Touchbar-Menu/static/js/runtime-main.c80529be.js.map",
     "static/js/2.2214d33e.chunk.js": "/React-Iphone-Touchbar-Menu/static/js/2.2214d33e.chunk.js",
     "static/js/2.2214d33e.chunk.js.map": "/React-Iphone-Touchbar-Menu/static/js/2.2214d33e.chunk.js.map",
     "index.html": "/React-Iphone-Touchbar-Menu/index.html",
-    "static/css/main.e2efecc4.chunk.css.map": "/React-Iphone-Touchbar-Menu/static/css/main.e2efecc4.chunk.css.map",
+    "static/css/main.69e5aa8f.chunk.css.map": "/React-Iphone-Touchbar-Menu/static/css/main.69e5aa8f.chunk.css.map",
     "static/js/2.2214d33e.chunk.js.LICENSE.txt": "/React-Iphone-Touchbar-Menu/static/js/2.2214d33e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.c80529be.js",
     "static/js/2.2214d33e.chunk.js",
-    "static/css/main.e2efecc4.chunk.css",
-    "static/js/main.e5e86696.chunk.js"
+    "static/css/main.69e5aa8f.chunk.css",
+    "static/js/main.b9f679d3.chunk.js"
   ]
 }
