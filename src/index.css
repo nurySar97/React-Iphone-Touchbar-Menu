@@ -17,8 +17,6 @@ body, html {
 
 body {
   background: linear-gradient(180deg, #9c1aff 0%, rgb(119, 0, 255) 100%);
-  position: relative;
-  height: 100vh;
 }
 
 .touchbar {
